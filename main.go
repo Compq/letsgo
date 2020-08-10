@@ -10,12 +10,12 @@ import (
 const PORT = ":4000"
 
 func main() {
-	mux := http.NewServeMux()
-	mux.HandleFunc("/", routes.HomePage)
-	mux.HandleFunc("/snippet", routes.ShowSnippet)
-	mux.HandleFunc("/snippet/create", routes.SnippetCreate)
+
+	http.HandleFunc("/", routes.HomePage)
+	http.HandleFunc("/snippet", routes.ShowSnippet)
+	http.HandleFunc("/snippet/create", routes.SnippetCreate)
 
 	log.Printf("Starting server on %s", PORT)
-	err := http.ListenAndServe(PORT, mux)
+	err := http.ListenAndServe(PORT, nil)
 	log.Fatal(err)
 }

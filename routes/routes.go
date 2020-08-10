@@ -4,7 +4,11 @@ import "net/http"
 
 //HomePage ...
 func HomePage(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hi there"))
+	if r.URL.Path != "/" {
+		http.NotFound(w, r)
+		return
+	}
+	w.Write([]byte("Hi from home!"))
 }
 
 //ShowSnippet ...
