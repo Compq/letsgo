@@ -1,7 +1,7 @@
 package main
 
 import (
-	"letsgo/routes"
+	"letsgo/server/routes"
 	"log"
 	"net/http"
 )
