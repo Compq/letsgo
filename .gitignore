@@ -3,3 +3,13 @@
 *_bin
 .idea
 .vscode
+
+client/.dart_tool
+client/coverage
+client/android/
+client/ios/
+client/web/
+client/build/
+
+coverage
+
